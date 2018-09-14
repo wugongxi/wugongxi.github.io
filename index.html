@@ -3,11 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            font-family: "Microsoft YaHei UI";
+            font-size: smaller;
+        }
+
+        .content {
+            width: 100%;
+            padding-left: 22px;
+            padding-right: 22px;
+
+        }
+
+        .content-item {
+            background-color: #fff;
+            float: left;
+            width: 32%;
+        }
+
+        .content-center {
+            background-color: #fff;
+            float: left;
+            width: 32%;
+            margin-left: 10px;
+        }
+
+        .content-right {
+            background-color: #fff;
+            float: left;
+            width: 32%;
+            margin-left: 10px;
+        }
+
+        .modifyTime {
+            margin-left: 24px;
+            margin-bottom: 12px;
+        }
+
+        .item {
+            font-size: 12px;
+            float: left;
+            width: calc(98%);
+            margin: 3px;
+            border: 1px solid #d1d1d1;
+            word-break: break-all;
+            word-wrap: break-word;
+        }
+
+        .item .i-content {
+            padding: 2px;
+        }
+
+        .item :hover {
+            background: #ffc1be;
+            transition: all 0.3s; /*图片放大过程的时间*/
+        }
+
+        .i-url {
+            padding-bottom: 3px;
+        }
+
+        .item .i-user {
+            padding-top: 1px;
+            padding-bottom: 1px;
+        }
+
+        .item .i-user:hover {
+            font-size: 13px;
+        }
+
+        .item a {
+            color: #0909ff;
+        }
+
+        span {
+            font-size: 6px;
+            color: rgb(68, 86, 220);
+        }
+
+        .i-user span {
+            font-size: 6px;
+            color: rgba(68, 86, 220, 0.38);
+        }
+
+        .i-user span :hover {
+            font-size: 13px;
+        }
+
+
+    </style>
+
+    <script type="application/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--<script type="application/javascript" src="./httptest/jquery.js">    </script>-->
+    <script type="application/javascript">
+        var sourceData = {
+            title: '资料',
+            content: {
+                left: [
+                    [['1', '主页', 'angame.top'], ['2', '', ''], ['2', '', ''], ['', '', '']]
+                ]
+            }
+        };
+
+        function init(f) {
+            var html = '';
+            var a = '<div id="content" class="content">';
+            for (var i = 0; i < f; i++) {
+                html += '<div id="content-' + i + '" class="content-item"></div>';
+            }
+            // html += '</div>';
+            console.log(html);
+            $('#content').html(html);
+        }
+
+        function initc(id, data) {
+            var html = '';
+            if (data.length > 0) {
+                for (var i = 0; i < data.length; i++) {
+                    var idata = data[i];
+                    html += '<div class="item"><div class="i-content">';
+                    for (var f = 0; f < idata.length; f++) {
+                        if (idata[f][0] == '1') {
+                            html += ('<p class="i-url">' + idata[f][1] + '：<a target="_blank" href="' + idata[f][2] + '">' + idata[f][2] + '</a></p>');
+                        } else if (idata[f][0] == '2') {
+                            html += '<p class="i-user"> ' + idata[f][1] + '：<span>' + idata[f][2] + '</span></p>';
+                        }
+                    }
+                    html += '</div></div>';
+                }
+            }
+            console.log(html);
+            $('#' + id).html(html);
+        }
+
+        window.onload = function () {
+            var dataa = {aa: 'a', 'bb': 'b', 'cc': 'c'};
+            console.log(sourceData.title)
+            var aar = ['aa', 'bb']
+            console.log(aar[1]);
+            init(5);
+            initc('content-0', sourceData.content.left);
+            initc('content-1', sourceData.content.left);
+        };
+
+
+    </script>
+
 </head>
 <body>
-aaaa
-<script>
-    alert("123345");
-</script>
+<div id="bod">
+    <h1 align="center" style="margin-top: 12px">地址备份</h1>
+    <div class="modifyTime">
+        <span id="modifytime"><font size="2" face="Verdana">更新于：2018年07月13日 17:10 星期五</font></span>
+    </div>
+    <div id="content" class="content">
+        <div id="content-0" class="content-item"></div>
+        <div id="content-1" class="content-item"></div>
+    </div>
+
+</div>
+
+
 </body>
 </html>
