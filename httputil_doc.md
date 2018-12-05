@@ -4,6 +4,25 @@ me network
 # HttpUtil - 0.1.15 一个基于okhttp的标准RESTful风格的网络框架，支持http和https
 This is a network request library that specializes in http and HTTPS. It aims to simplify the network connection module in Android applications.
 
+
+
+Maven
+```
+<dependency>
+  <groupId>top.wgx.util</groupId>
+  <artifactId>net</artifactId>
+  <version>0.1.16</version>
+  <type>pom</type>
+</dependency>
+```
+GRADLE
+```java
+compile 'top.wgx.util:net:0.1.15'
+```
+
+
+
+
 Examples
 
 GET A URL
