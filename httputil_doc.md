@@ -7,7 +7,7 @@ This is a network request library that specializes in http and HTTPS. It aims to
 
 
 Maven
-```
+```java
 <dependency>
   <groupId>top.wgx.util</groupId>
   <artifactId>net</artifactId>
@@ -16,6 +16,7 @@ Maven
 </dependency>
 ```
 GRADLE
+
 ```java
 compile 'top.wgx.util:net:0.1.15'
 ```
