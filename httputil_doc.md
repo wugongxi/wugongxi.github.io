@@ -11,7 +11,7 @@ Maven
 <dependency>
   <groupId>top.wgx.util</groupId>
   <artifactId>net</artifactId>
-  <version>0.1.16</version>
+  <version>0.1.15</version>
   <type>pom</type>
 </dependency>
 ```
