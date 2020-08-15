@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
+	
     <title>Title</title>
     <style>
         * {
@@ -106,7 +107,7 @@
         }
 
         .item .i-user:hover {
-            font-size: 13px;
+            font-size: 10px;
         }
 
         .item a {
@@ -137,8 +138,9 @@
             title: { title:['0', '文档记录', '/'],motifyTime:'2018年09月15日'},//0 文字链接 1 图片链接
             content: {
                 left: [
+                    [['1', 'test', 'http://www.angame.top'], ['2', 'test', 'test'],['3', 'test', 'tasdfl;asjdfk asldkfj alks jdflka jslkdfj lasj dfla jsldf jlaksjd flk ajslkdf jlaks jdflalks jdflka jslkdfj lasj dfla jsldf jlaksjd flk ajslkdf jlaks jdflalks jdflka jslkdfj lasj dfla jsldf jlaksjd flk ajslkdf jlaks jdflalks jdflka jslkdfj lasj dfla jsldf jlaksjd flk ajslkdf jlaks jdflalks jdflka jslkdfj lasj dfla jsldf jlaksjd flk ajslkdf jlaks jdflalks jdflka jslkdfj lasj dfla jsldf jlaksjd flk ajslkdf jlaks jdflalks jdflka jslkdfj lasj dfla jsldf jlaksjd flk ajslkdf jlaks jdflk aslkdf alksd fl ajsldf jest']],
                     [['1', 'test', 'http://www.angame.top'], ['2', 'test', 'test']]
-                  
+
                 ]
             }
         };
@@ -164,8 +166,10 @@
                         if (idata[f][0] == '1') {
                             html += ('<p class="i-url">' + idata[f][1] + '：<a target="_blank" href="' + idata[f][2] + '">' + idata[f][2] + '</a></p>');
                         } else if (idata[f][0] == '2') {
-                            html += '<p class="i-user"> ' + idata[f][1] + '：<span>' + idata[f][2] + '</span></p>';
-                        }
+                            html += '<p class="i-user"> ' + idata[f][1] + '：<span style="margin-left:12px">' + idata[f][2] + '</span></p>';
+                        } else {
+							html += '<p class="i-user"> ' + idata[f][1] + '：<span>' + idata[f][2] + '</span></p>';
+						}
                     }
                     html += '</div></div>';
                 }
@@ -199,9 +203,16 @@
             var aar = ['aa', 'bb']
             console.log(aar[1]);
             ititle('c-h', sourceData.title)
-            init(5);
+            init(155);
             initc('content-0', sourceData.content.left);
             initc('content-1', sourceData.content.left);
+            initc('content-2', sourceData.content.left);
+			initc('content-3', sourceData.content.left);
+			initc('content-4', sourceData.content.left);
+			initc('content-5', sourceData.content.left);
+			initc('content-6', sourceData.content.left);
+			initc('content-7', sourceData.content.left);
+			initc('content-9', sourceData.content.left);
         };
 
 
