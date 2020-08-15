@@ -7,15 +7,27 @@ This is a network request library that specializes in http and HTTPS. It aims to
 
 
 Maven
+<<<<<<< HEAD
 ```
 <dependency>
   <groupId>top.wgx.util</groupId>
   <artifactId>net</artifactId>
   <version>0.1.16</version>
+=======
+```java
+<dependency>
+  <groupId>top.wgx.util</groupId>
+  <artifactId>net</artifactId>
+  <version>0.1.15</version>
+>>>>>>> fce81640260543939b056f22f514cbf37b9d1541
   <type>pom</type>
 </dependency>
 ```
 GRADLE
+<<<<<<< HEAD
+=======
+
+>>>>>>> fce81640260543939b056f22f514cbf37b9d1541
 ```java
 compile 'top.wgx.util:net:0.1.15'
 ```
@@ -171,4 +183,8 @@ DOWNLOAD FILE
 
 
 
+<<<<<<< HEAD
 #end
+=======
+#end
+>>>>>>> fce81640260543939b056f22f514cbf37b9d1541
